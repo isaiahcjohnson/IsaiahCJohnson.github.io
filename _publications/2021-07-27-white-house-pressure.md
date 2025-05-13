@@ -1,7 +1,7 @@
 ---
 title: "Presidential ‘Pitches’ and White House Pressure: Inter-Personal Presidential Persuasion in a Shared Lawmaking Environment"
 collection: publications
-category: journal
+category: manuscripts
 permalink: /publication/2021-white-house-pressure
 excerpt: "This paper explores how presidents use private persuasion to influence lawmakers in shared legislative contexts."
 date: 2021-07-27
