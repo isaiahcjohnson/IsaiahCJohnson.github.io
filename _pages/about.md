@@ -9,7 +9,7 @@ redirect_from:
 
 I am a PhD candidate in the Department of Politics and a graduate affiliate with the Center for the Study of Democratic Politics at Princeton University. I am currently on the job market.  
 
-I study political economy with a focus on race and ethnic politics. My research explores how Multiracial Americans utilize their identity in strategic ways to gain political power. This work combines formal theory and quantitative methods to examine how Multiracial Americans navigate institutional incentives to signal identity and secure political representation.  
+I study political economy, with a focus on race and ethnic politics. My research explores how Multiracial Americans utilize their identity in strategic ways to gain political power. This work combines formal theory and quantitative methods to examine how Multiracial Americans navigate institutional incentives to signal identity and secure political representation.  
 
 I received a B.S. and M.A. in Political Science from the University of Houston in 2019 and 2021.
 
