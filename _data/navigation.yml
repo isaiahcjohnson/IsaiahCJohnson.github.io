@@ -14,10 +14,10 @@ main:
   - title: "Teaching"
     url: /teaching/    
     
-  - title: "CV"
-    url: /cv/
+  - #title: "CV"
+    #url: /cv/
     
-  # - title: "CV"
-  #   url: https://isaiahcjohnson.github.io/files/JohnsonI_CV.pdf
+   - title: "CV"
+     url: /files/JohnsonI_CV.pdf
 
 
