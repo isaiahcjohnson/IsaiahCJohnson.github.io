@@ -6,7 +6,6 @@ permalink: /publication/2021-white-house-pressure
 excerpt: "This paper explores how presidents use private persuasion to influence lawmakers in shared legislative contexts."
 date: 2021-07-27
 venue: 'Presidential Studies Quarterly'
-slidesurl: ''
 paperurl: 'https://isaiahcjohnson.github.io/files/2021-07-27-white-house-pressure.pdf'
 bibtexurl: 'https://isaiahcjohnson.github.io/files/bibtex1.bib'
 citation: 'Rottinghaus, Brandon, and Isaiah Johnson. (2021). &quot;Presidential ‘Pitches’ and White House Pressure: Inter-Personal Presidential Persuasion in a Shared Lawmaking Environment.&quot; <i>Presidential Studies Quarterly</i>.'
