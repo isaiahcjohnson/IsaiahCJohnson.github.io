@@ -1,13 +1,11 @@
 ---
 permalink: /
-title: "Welcome"
+title: "Welcome!"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-
-##Welcome!  
 
 I am a PhD candidate in the Department of Politics and a graduate affiliate with the Center for the Study of Democratic Politics at Princeton University. I am currently on the job market.  
 
