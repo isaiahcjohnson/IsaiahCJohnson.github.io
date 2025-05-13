@@ -13,8 +13,14 @@ I study political economy, with a focus on race and ethnic politics. My research
 
 I received a B.S. and M.A. in Political Science from the University of Houston in 2019 and 2021.
 
-<a href="/files/JohnsonI_CV.pdf" target="_blank" style="padding:10px 15px; background:#007acc; color:white; text-decoration:none; border-radius:5px;">
-  <i class="fas fa-file-pdf"></i> Download CV (PDF)
+<a href="/publications" target="_blank" style="padding:10px 15px; background:#007acc; color:white; text-decoration:none; border-radius:5px; margin-right: 10px;">
+  <i class="fas fa-book"></i> Learn about my research
 </a>
+
+<a href="/files/JohnsonI_CV.pdf" target="_blank" style="padding:10px 15px; background:#007acc; color:white; text-decoration:none; border-radius:5px;">
+  <i class="fas fa-file-pdf"></i> CV
+</a>
+
+
 
 
