@@ -8,5 +8,10 @@ author_profile: true
 {% include base_path %}
 
 {% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+  <div class="teaching-entry" style="margin-bottom: 2em;">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p><strong>{{ post.excerpt }}</strong></p>
+    <p><a href="{{ post.url | relative_url }}">Read more</a></p>
+  </div>
 {% endfor %}
+
