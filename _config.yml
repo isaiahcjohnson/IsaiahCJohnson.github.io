@@ -22,7 +22,7 @@ repository               : "isaiahcjohnson/isaiahcjohnson.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "Headshot.png"
   name             : "Isaiah C. Johnson"
   pronouns         : "he/him"  
   bio              : "I’m a Ph.D. candidate in Politics at Princeton University and a graduate affiliate of the Center for the Study of Democratic Politics."

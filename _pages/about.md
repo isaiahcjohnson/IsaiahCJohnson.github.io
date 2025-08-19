@@ -6,6 +6,9 @@ redirect_from:
   - /about/
   - /about.html
 ---
+<center>
+  <img src="{{ site.baseurl }}/images/Full.png" alt="Welcome" width="600">
+</center>
 
 I am a Ph.D. candidate in the Department of Politics and a graduate affiliate with the Center for the Study of Democratic Politics at Princeton University. I am currently on the job market.  
 
