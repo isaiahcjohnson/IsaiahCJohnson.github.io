@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome!"
+title: "Isaiah C. Johnson
 author_profile: true
 redirect_from: 
   - /about/
