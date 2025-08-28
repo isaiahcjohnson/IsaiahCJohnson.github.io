@@ -15,7 +15,7 @@ redirect_from:
 
 I am a Ph.D. candidate in the Department of Politics and a graduate affiliate with the Center for the Study of Democratic Politics at Princeton University. I am currently on the job market.  
 
-I study American politics with a focus on the political economy of race. My research examines how members of Congress navigate uncertainty when making decisions, particularly in contexts where electoral incentives and racial dynamics intersect. I employ formal theory to model the strategic choices legislators face and use quantitative methods to test these predictions in empirical settings. By combining theoretical and empirical approaches, my research advances our understanding of how race structures institutional incentives and decision-making in American politics.  
+I study American politics with a focus on the political economy of race. My research examines how politicians navigate uncertainty when making decisions, particularly in contexts where electoral incentives and racial dynamics intersect. I employ formal theory to model the strategic choices legislators face and use quantitative methods to test these predictions in empirical settings. By combining theoretical and empirical approaches, my research advances our understanding of how race structures institutional incentives and decision-making in American politics.  
 
 I received a B.S. and M.A. in Political Science from the University of Houston in 2019 and 2021.
 
