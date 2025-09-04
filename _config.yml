@@ -76,12 +76,16 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
+# Research Category - The following the list of research categories and their headings
+research_category:
   books:
     title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Journal Articles'
+  working_papers:
+    title: 'Working Papers'
+  works_in_progress:
+    title: 'Works in Progress'
   conferences:
     title: 'Conference Papers'
 
