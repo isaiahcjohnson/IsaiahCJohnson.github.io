@@ -153,9 +153,10 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider: "google-analytics-4"   # enable GA4
   google:
-    tracking_id          :
+    tracking_id: "G-JVPF6FE8MV"    # your GA4 Measurement ID
+
 
 
 # Reading Files
