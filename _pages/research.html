@@ -5,26 +5,27 @@ permalink: /research/
 author_profile: true
 ---
 
-{% include base_path %}
+{% if site.author.googlescholar %} <div class="wordwrap">You can also find my articles on <a href="
+  {{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+   {% endif %}
 
-<p style="font-size:0.9em;color:#666;">Total research items: {{ site.research | size }}</p>
+  {% include base_path%} 
 
-{% assign cats = site.research_category %}
-{% assign order = "books,manuscripts,working_papers,works_in_progress,conferences,reports" | split: "," %}
-
-{% for key in order %}
-  {% assign k = key | strip %}
-  {% assign heading = cats[k].title | default: k %}
-
-  {# match either `category: k` or `categories: [k, ...]` #}
-  {% assign items_strict = site.research | where: "category", k %}
-  {% assign items_array  = site.research | where_exp: "it", "it.categories and it.categories contains k" %}
-  {% assign items = items_strict | concat: items_array | sort: "date" | reverse %}
-
-  {% if items.size > 0 %}
-    <h2>{{ heading }}</h2><hr />
-    {% for post in items %}
-      {% include archive-single.html post=post %}
-    {% endfor %}
-  {% endif %}
-{% endfor %}
+  <!-- New style rendering if publication categories are defined -->
+    {% if site.research_category %} 
+    {% for category in site.research_category %} 
+    {% assign title_shown = false %} 
+    {% for post in site.research reversed %} 
+    {% if post.category != category[0] %} 
+      {% continue %} 
+      {% endif %} 
+      {% unless title_shown %} 
+      <h2>{{ category[1].title }}</h2><hr /> 
+      {% assign title_shown = true %} 
+       {% endunless %} 
+      {% include archive-single.html %} 
+        {% endfor %} 
+        {% endfor %} 
+       {% else %} 
+      {% for post in site.research reversed %} 
+      {% include archive-single.html %} {% endfor %} {% endif %}
