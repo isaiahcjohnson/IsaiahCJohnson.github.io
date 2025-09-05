@@ -80,19 +80,17 @@ author:
 # -------------------------
 # Research category labels
 # -------------------------
-research_category:
+publication_category:
   books:
-    title: "Books"
+    title: 'Books'
   manuscripts:
-    title: "Journal Articles"
+    title: 'Journal Articles'   
   working_papers:
-    title: "Working Papers"
-  works_in_progress:
-    title: "Works in Progress"
-  conferences:
-    title: "Conference Papers"
+    title: 'Working Papers'
+  work_in_progress:
+    title: 'Work in Progress'
   reports:
-    title: "Reports"
+    title: 'Reports'
 
 
 # Site Settings
@@ -227,7 +225,7 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path/
-  research:
+  publications:
     output: true
     permalink: /:collection/:path/
   portfolio:
@@ -270,7 +268,7 @@ defaults:
   # _research
   - scope:
       path: ""
-      type: research
+      type: publications
     values:
       layout: single
       author_profile: true
