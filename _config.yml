@@ -89,12 +89,19 @@ collections:
 # Research category labels
 # -------------------------
 research_category:
-  books:            { title: "Books" }
-  manuscripts:      { title: "Journal Articles" }
-  working_papers:   { title: "Working Papers" }
-  works_in_progress:{ title: "Works in Progress" }
-  conferences:      { title: "Conference Papers" }
-  reports:          { title: "Reports" }
+  books:
+    title: "Books"
+  manuscripts:
+    title: "Journal Articles"
+  working_papers:
+    title: "Working Papers"
+  works_in_progress:
+    title: "Works in Progress"
+  conferences:
+    title: "Conference Papers"
+  reports:
+    title: "Reports"
+
 
 # Markdown/Highlight (safe defaults)
 markdown: kramdown
