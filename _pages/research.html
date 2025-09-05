@@ -5,32 +5,74 @@ permalink: /research/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.research_category %}
-  {% for category in site.research_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.research reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+<p style="font-size:0.9em;color:#666;">
+  Total research items: {{ site.research | size }}
+</p>
+
+{% assign cats = site.research_category %}
+
+{%- comment -%}
+Define explicit display order for headings.
+Keys must match your front-matter values (category or categories).
+{%- endcomment -%}
+{% assign order = "books,manuscripts,working_papers,works_in_progress,conferences" | split: "," %}
+
+{%- for key in order -%}
+  {% assign k = key | strip %}
+  {% assign heading = cats[k].title | default: k %}
+
+  {%- comment -%}
+  Match either:
+   - category: manuscripts
+   - categories: [manuscripts, ...]
+  {%- endcomment -%}
+  {% assign items_strict = site.research | where: "category", k %}
+  {% assign items_array = site.research | where_exp: "it", "it.categories and it.categories contains k" %}
+  {% assign items = items_strict | concat: items_array | sort: "date" | reverse %}
+
+  {% if items and items.size > 0 %}
+    <h2>{{ heading }}</h2><hr />
+    <ul class="archive__items">
+    {% for post in items %}
+      <li class="archive__item">
+        <h3 class="archive__item-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <p class="archive__item-excerpt">
+          {% if post.venue %}<em>{{ post.venue }}</em>{% endif %}
+          {% if post.date %}{% if post.venue %} · {% endif %}{{ post.date | date: "%Y" }}{% endif %}
+          {% if post.excerpt %}<br>{{ post.excerpt }}{% endif %}
+        </p>
+        <p class="archive__item-meta">
+          {% if post.paperurl %}<a href="{{ post.paperurl }}">PDF</a>{% endif %}
+          {% if post.bibtexurl %}{% if post.paperurl %} · {% endif %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}
+        </p>
+      </li>
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.research reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
+    </ul>
+  {% endif %}
+{%- endfor -%}
+
+{%- comment -%}
+Optional: show uncategorized items so nothing is lost
+{%- endcomment -%}
+{% assign categorized = "" | split: "" %}
+{% for key in order %}
+  {% assign k = key | strip %}
+  {% assign items_strict = site.research | where: "category", k %}
+  {% assign items_array = site.research | where_exp: "it", "it.categories and it.categories contains k" %}
+  {% assign categorized = categorized | concat: items_strict | concat: items_array %}
+{% endfor %}
+{% assign uncategorized = site.research | where_exp: "it", "categorized contains it == false" %}
+{% if uncategorized.size > 0 %}
+  <h2>Other</h2><hr />
+  <ul class="archive__items">
+    {% for post in uncategorized %}
+      <li class="archive__item">
+        <h3 class="archive__item-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      </li>
+    {% endfor %}
+  </ul>
 {% endif %}
-
-
-
