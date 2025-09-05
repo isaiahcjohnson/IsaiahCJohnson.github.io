@@ -77,9 +77,6 @@ author:
   zhihu            : # Username
 
 # Research Category - The following the list of research categories and their headings
-# -------------------------
-# Research category labels
-# -------------------------
 publication_category:
   books:
     title: 'Books'
@@ -230,10 +227,11 @@ collections:
     permalink: /:collection/:path/
   portfolio:
     output: true
-    permalink: /:collrection/:path/
+    permalink: /:collection/:path/
   talks:
     output: true
     permalink: /:collection/:path/
+
 
 
 # These settings control how pages and collections are included in the site
@@ -265,7 +263,7 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _research
+  # _publications
   - scope:
       path: ""
       type: publications
@@ -291,6 +289,7 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+
 
 
 # Sass/SCSS
