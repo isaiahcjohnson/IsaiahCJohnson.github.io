@@ -78,14 +78,6 @@ author:
 
 # Research Category - The following the list of research categories and their headings
 # -------------------------
-# Collections
-# -------------------------
-collections:
-  research:
-    output: true
-    permalink: /research/:path/
-
-# -------------------------
 # Research category labels
 # -------------------------
 research_category:
@@ -101,14 +93,6 @@ research_category:
     title: "Conference Papers"
   reports:
     title: "Reports"
-
-
-# Markdown/Highlight (safe defaults)
-markdown: kramdown
-kramdown:
-  input: GFM
-highlighter: rouge
-
 
 
 # Site Settings
@@ -243,12 +227,12 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path/
-  publications:
+  research:
     output: true
     permalink: /:collection/:path/
   portfolio:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collrection/:path/
   talks:
     output: true
     permalink: /:collection/:path/
@@ -283,10 +267,10 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _publications
+  # _research
   - scope:
       path: ""
-      type: publications
+      type: research
     values:
       layout: single
       author_profile: true
