@@ -7,72 +7,56 @@ author_profile: true
 
 {% include base_path %}
 
-<p style="font-size:0.9em;color:#666;">
-  Total research items: {{ site.research | size }}
-</p>
+{%- comment -%}
+Debug counter: confirms Jekyll sees your collection
+{%- endcomment -%}
+<p style="font-size:0.9em;color:#666;">Total research items: {{ site.research | size }}</p>
 
-{% assign cats = site.research_category %}
+{%- assign cats = site.research_category -%}
 
 {%- comment -%}
-Define explicit display order for headings.
-Keys must match your front-matter values (category or categories).
+Stable display order. Keys must match your items' category (or categories) values.
 {%- endcomment -%}
-{% assign order = "books,manuscripts,working_papers,works_in_progress,conferences" | split: "," %}
+{%- assign order = "books,manuscripts,working_papers,works_in_progress,conferences,reports" | split: "," -%}
 
 {%- for key in order -%}
-  {% assign k = key | strip %}
-  {% assign heading = cats[k].title | default: k %}
+  {%- assign k = key | strip -%}
+  {%- assign heading = cats[k].title | default: k -%}
 
   {%- comment -%}
-  Match either:
-   - category: manuscripts
-   - categories: [manuscripts, ...]
+  Gather items that match either:
+    category: k
+    OR categories: [ ... k ... ]
   {%- endcomment -%}
-  {% assign items_strict = site.research | where: "category", k %}
-  {% assign items_array = site.research | where_exp: "it", "it.categories and it.categories contains k" %}
-  {% assign items = items_strict | concat: items_array | sort: "date" | reverse %}
+  {%- assign items_strict = site.research | where: "category", k -%}
+  {%- assign items_array  = site.research | where_exp: "it", "it.categories and it.categories contains k" -%}
+  {%- assign items = items_strict | concat: items_array | sort: "date" | reverse -%}
 
-  {% if items and items.size > 0 %}
+  {%- if items.size > 0 -%}
     <h2>{{ heading }}</h2><hr />
-    <ul class="archive__items">
-    {% for post in items %}
-      <li class="archive__item">
-        <h3 class="archive__item-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h3>
-        <p class="archive__item-excerpt">
-          {% if post.venue %}<em>{{ post.venue }}</em>{% endif %}
-          {% if post.date %}{% if post.venue %} · {% endif %}{{ post.date | date: "%Y" }}{% endif %}
-          {% if post.excerpt %}<br>{{ post.excerpt }}{% endif %}
-        </p>
-        <p class="archive__item-meta">
-          {% if post.paperurl %}<a href="{{ post.paperurl }}">PDF</a>{% endif %}
-          {% if post.bibtexurl %}{% if post.paperurl %} · {% endif %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}
-        </p>
-      </li>
-    {% endfor %}
-    </ul>
-  {% endif %}
+    {%- for post in items -%}
+      {%- comment -%}
+      Use the theme's card/list rendering. Important: pass post=post!
+      {%- endcomment -%}
+      {% include archive-single.html post=post %}
+    {%- endfor -%}
+  {%- endif -%}
 {%- endfor -%}
 
 {%- comment -%}
-Optional: show uncategorized items so nothing is lost
+Optional: show anything uncategorized so nothing is hidden
 {%- endcomment -%}
-{% assign categorized = "" | split: "" %}
-{% for key in order %}
-  {% assign k = key | strip %}
-  {% assign items_strict = site.research | where: "category", k %}
-  {% assign items_array = site.research | where_exp: "it", "it.categories and it.categories contains k" %}
-  {% assign categorized = categorized | concat: items_strict | concat: items_array %}
-{% endfor %}
-{% assign uncategorized = site.research | where_exp: "it", "categorized contains it == false" %}
-{% if uncategorized.size > 0 %}
+{%- assign categorized = "" | split: "" -%}
+{%- for key in order -%}
+  {%- assign k = key | strip -%}
+  {%- assign items_strict = site.research | where: "category", k -%}
+  {%- assign items_array  = site.research | where_exp: "it", "it.categories and it.categories contains k" -%}
+  {%- assign categorized = categorized | concat: items_strict | concat: items_array -%}
+{%- endfor -%}
+{%- assign uncategorized = site.research | where_exp: "it", "categorized contains it == false" -%}
+{%- if uncategorized.size > 0 -%}
   <h2>Other</h2><hr />
-  <ul class="archive__items">
-    {% for post in uncategorized %}
-      <li class="archive__item">
-        <h3 class="archive__item-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      </li>
-    {% endfor %}
-  </ul>
-{% endif %}
+  {%- for post in uncategorized -%}
+    {% include archive-single.html post=post %}
+  {%- endfor -%}
+{%- endif -%}

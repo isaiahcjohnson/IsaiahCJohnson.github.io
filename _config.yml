@@ -77,13 +77,31 @@ author:
   zhihu            : # Username
 
 # Research Category - The following the list of research categories and their headings
+# -------------------------
+# Collections
+# -------------------------
+collections:
+  research:
+    output: true
+    permalink: /research/:path/
+
+# -------------------------
+# Research category labels
+# -------------------------
 research_category:
-  books: { title: "Books" }
-  manuscripts: { title: "Journal Articles" }
-  working_papers: { title: "Working Papers" }
-  works_in_progress: { title: "Works in Progress" }
-  conferences: { title: "Conference Papers" }
-  reports: { title: "Reports"}
+  books:            { title: "Books" }
+  manuscripts:      { title: "Journal Articles" }
+  working_papers:   { title: "Working Papers" }
+  works_in_progress:{ title: "Works in Progress" }
+  conferences:      { title: "Conference Papers" }
+  reports:          { title: "Reports" }
+
+# Markdown/Highlight (safe defaults)
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+
 
 
 # Site Settings
