@@ -1,0 +1,20 @@
+# Global
+User-agent: *
+Disallow: /cgi-bin/
+Crawl-delay: 5   # Google ignores; Bing may honor (see notes)
+
+# Some noisy SEO crawlers
+User-agent: SemrushBot
+Disallow: /
+User-agent: AhrefsBot
+Disallow: /
+User-agent: MJ12bot
+Disallow: /
+
+# Opt-out common AI crawlers
+User-agent: GPTBot
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: Claude-Web
+Disallow: /
