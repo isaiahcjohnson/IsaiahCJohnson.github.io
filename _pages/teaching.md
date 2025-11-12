@@ -1,6 +1,7 @@
 ---
-title: "Teaching"
+layout: collection-archive-single
 permalink: /teaching/
+title: "Teaching"
 author_profile: true
 header: false
 collection: teaching

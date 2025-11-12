@@ -1,0 +1,16 @@
+---
+layout: archive
+---
+
+{% include base_path %}
+
+{{ content }}
+
+{%- assign entries = site[page.collection] | sort: "date" | reverse -%}
+{%- if entries and entries.size > 0 -%}
+  {%- for post in entries -%}
+    {%- include archive-single.html type=page.entries_layout -%}
+  {%- endfor -%}
+{%- else -%}
+  <p><em>No items found in the “{{ page.collection }}” collection.</em></p>
+{%- endif -%}
