@@ -12,3 +12,4 @@ excerpt: "Semesters Taught: Spring 2024, Spring 2025"
 A rigorous introduction to choice theory, social choice theory, and non-cooperative game theory. The course serves as the first formal theory graduate course and draws on mathematics at the level of POL 502.
 
 Intstructor: Gleason Judd (2024), Kristopher Ramsay (2025)
+Evaluation: 4.31/5.0 and 5.0/5.0
