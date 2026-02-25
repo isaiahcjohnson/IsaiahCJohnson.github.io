@@ -152,11 +152,11 @@ social:
 
 
 # Analytics
+# Analytics
 analytics:
-  provider: "google-analytics-4"   # enable GA4
+  provider: false
   google:
-    tracking_id: "G-JVPF6FE8MV"    # your GA4 Measurement ID
-
+    tracking_id:
 
 
 # Reading Files
