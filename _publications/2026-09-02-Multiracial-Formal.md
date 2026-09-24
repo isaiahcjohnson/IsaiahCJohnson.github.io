@@ -1,10 +1,10 @@
 ---
-title: "Jack of All Trades, Master of None: Multiracial Politicians and Political Representation"
+title: "Jack of All Trades, Master of Some: Racial Competency and the Limits of Multiracial Representation"
 collection: publications
 category: working_papers
 permalink: /publication/2026-multiracial-formal
 excerpt: "This paper provides a pathway to understanding how electoral incentives condition Multiracial incumbents’ choice to exaggerate policy or reveal competence."
-date: 2026-09-02
+date: 2026-09-24
 paperurl: 'https://isaiahcjohnson.github.io/files/2026-09-02-Multiracial-Formal.pdf'
 ---
 
