@@ -22,9 +22,9 @@ My teaching philosophy centers on the idea that education should not be “one s
 
 - Introduction to American Politics
 - Race and Ethnic Politics in the United States
-- The American Presidency / Executive Politics
 - Formal Theory for Political Science
 - Research Design and Quantitative Methods
-- The United States Congress
+- Representation and Democracy
+- Electoral Behavior
 
 ## Courses Taught
