@@ -18,13 +18,4 @@ In 2025, I received the *George Kateb Preceptor Award*, the highest recognition 
 
 My teaching philosophy centers on the idea that education should not be “one size fits all.” I strive to create spaces where students can engage with substantive and methodological material in supportive, rigorous, and inclusive ways. For example, when teaching undergraduate quantitative methods, I often encouraged my students to place themselves in the mind of a researcher working through a design-issue or challenge: how would you go about solving this problem in a perfect world? Then, what steps can we take as researchers given the constraints we face? I treat mistakes as opportunities for growth and emphasize clarity over jargon, building students’ confidence through application, iteration, and open dialogue. Across substantive and methods courses, my goal is a classroom where students ask questions freely, challenge assumptions respectfully, and leave with the tools to design and carry out their own research.
 
-### Courses I am prepared to teach
-
-- Introduction to American Politics
-- Race and Ethnic Politics in the United States
-- Formal Theory for Political Science
-- Research Design and Quantitative Methods
-- Representation and Democracy
-- Electoral Behavior
-
 ## Courses Taught
