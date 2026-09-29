@@ -4,7 +4,7 @@ collection: publications
 category: working_papers
 permalink: /publication/2026-multiracial-representation-experiment
 excerpt: "These findings advance theories of descriptive representation by demonstrating that shared racial identity does not guarantee racial competence."
-date: 2026-02-17
+date: 2026-07-04
 paperurl: 'https://isaiahcjohnson.github.io/files/2026-02-17-RCEXP-Draft.pdf'
 ---
 
